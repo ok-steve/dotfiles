@@ -1,0 +1,9 @@
+[core]
+  autocrlf = input
+  safecrlf = true
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  mergetool = vimdiff
+[user]
+  name = Your Name
+  email = you@example.com

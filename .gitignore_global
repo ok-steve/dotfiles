@@ -1,0 +1,37 @@
+# Temporary system files
+*.LCK
+*.bak
+Thumbs.db
+.DS_Store
+dwsync.xml
+goutputstream-*
+
+# Merge conflict files
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.orig
+
+# If using Vim
+*.swp
+*~
+
+# If using Sublime Text
+*.sublime-*
+
+# If using Node
+npm-debug.log
+bower_components
+node_modules
+jspm_packages
+
+# If using Python
+*.pyc
+
+# If using Sass
+.sass-cache
+
+# Other
+TODO
+*.map
