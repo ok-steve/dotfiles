@@ -34,6 +34,10 @@ set shiftwidth=2
 set softtabstop=2
 set autoindent
 
+" Configure NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['.DS_Store', '.git$[[dir]]', '.nyc_output$[[dir]]', '.swp', 'coverage$[[dir]]', 'dist$[[dir]]', 'jspm_packages$[[dir]]', 'node_modules$[[dir]]', '.tmp$[[dir]]']
+
 " Map custom shortcuts
 map <C-n> :NERDTreeToggle<CR>
 
