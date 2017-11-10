@@ -7,3 +7,7 @@
 [user]
   name = Your Name
   email = you@example.com
+[alias]
+  pf = push --force-with-lease
+  stats = shortlog -sn
+  praise = blame
