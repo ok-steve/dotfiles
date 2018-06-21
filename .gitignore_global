@@ -13,24 +13,25 @@ goutputstream-*
 *.REMOTE.*
 *.orig
 
-# If using Vim
+# Vim
 *.swp
+*.swo
 *~
 
-# If using Sublime Text
+# Sublime Text
 *.sublime-*
 
-# If using Node
+# Node
 npm-debug.log
 yarn-error.log
 bower_components
 node_modules
 jspm_packages
 
-# If using Python
+# Python
 *.pyc
 
-# If using Sass
+# Sass
 .sass-cache
 
 # Other
