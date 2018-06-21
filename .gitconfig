@@ -5,8 +5,8 @@
   editor = vim
   mergetool = vimdiff
 [user]
-  name = Your Name
-  email = you@example.com
+  name = Steve Cherry
+  email = stevenccherry@gmail.com
 [alias]
   pf = push --force-with-lease
   stats = shortlog -sn
