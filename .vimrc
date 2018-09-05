@@ -1,14 +1,46 @@
 " Use Vim settings, rather than Vi (must come first)
 set nocompatible
 
-" Make backspace behave in a sane manner
-set backspace=indent,eol,start
+""""""""""""""""
+" Plugin manager
+""""""""""""""""
 
-" Switch syntax highlighting on
-syntax on
+" Automatically install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.usercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin('~/.vim/bundle')
+
+Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'evidens/vim-twig'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'https://git.drupal.org/project/vimrc.git', { 'branch': '*.x-1.x', 'rtp': 'bundle/vim-plugin-for-drupal' }
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
+Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-signify'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-vdebug/vdebug'
+Plug 'w0rp/ale'
 
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
+
+call plug#end()
+
+
+
+
+
+"""""""
+" Theme
+"""""""
 
 " Show line numbers
 set number
@@ -16,44 +48,61 @@ set number
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
-" Turn on Pathogen
-execute pathogen#infect()
-
-" Color schemes
-colorscheme base16-solarized
-
-if has('gui_running')
-  set background=dark
-else
-  set background=light
-endif
-
-" Configure default indentation
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set autoindent
-
-" Configure NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.DS_Store', '.git$[[dir]]', '.nyc_output$[[dir]]', '.swp', 'coverage$[[dir]]', 'dist$[[dir]]', 'jspm_packages$[[dir]]', 'node_modules$[[dir]]', '.tmp$[[dir]]']
-
-" Map custom shortcuts
-map <C-n> :NERDTreeToggle<CR>
-
 " Show 80 columns
 set colorcolumn=80
 
 " Show invisibles
 set list
-set listchars=tab:»-,trail:·,eol:¬
 
-" Associate extensions with filetypes
-au BufNewFile,BufRead *.module set filetype=php
-au BufNewFile,BufRead *.theme set filetype=php
-au BufNewFile,BufRead *.install set filetype=php
-au BufNewFile,BufRead *.inc set filetype=php
-au BufNewFile,BufRead *.twig set filetype=html
-au BufNewFile,BufRead *.vue set filetype=html
-au BufNewFile,BufRead *.ts set filetype=javascript
-au BufNewFile,BufRead *.njk set filetype=jinja
+" Color schemes
+colorscheme base16-solarized-light
+
+
+
+
+
+""""""""""""
+" File types
+""""""""""""
+
+" Code completion
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+
+
+
+
+"""""""""
+" Plugins
+"""""""""
+
+" NERDTree
+let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore=['\.DS_Store', '\.git$[[dir]]', '\.nyc_output$[[dir]]', '\.swp', 'coverage$[[dir]]', 'dist$[[dir]]', 'jspm_packages$[[dir]]', 'node_modules$[[dir]]', '\.tmp$[[dir]]', '\.svn$[[dir]]']
+let g:NERDTreeChDirMode=2
+
+map <C-n> :NERDTreeToggle<CR>
+
+" Goyo/Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" vim-signify
+let g:signify_vcs_list = ['git', 'svn']
+
+
+
+
+
+"""""""
+" Other
+"""""""
+
+" For Webpack (https://webpack.js.org/guides/development/)
+set backupcopy=yes
+
+" Allow per-project .vimrc files
+set exrc
+
+" Disable unsafe commands
+set secure
