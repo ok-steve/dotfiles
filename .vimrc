@@ -13,7 +13,6 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'evidens/vim-twig'
 Plug 'hail2u/vim-css3-syntax'
@@ -53,9 +52,6 @@ set colorcolumn=80
 
 " Show invisibles
 set list
-
-" Color schemes
-colorscheme base16-solarized-light
 
 
 
