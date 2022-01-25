@@ -11,7 +11,7 @@ This repo contains my dotfiles as well as instructions on setting up a local dev
 
 ```
 git clone --bare https://github.com/sccherry/dotfiles.git $HOME/.cfg
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'\nsource $HOME/.aliasrc" >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
 
