@@ -14,6 +14,7 @@ git clone --bare https://github.com/sccherry/dotfiles.git $HOME/.cfg
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'\nsource $HOME/.aliasrc" >> $HOME/.bashrc
 source $HOME/.bashrc
 config checkout
+config config --local status.showUntrackedFiles no
 ```
 
 ## Commands
