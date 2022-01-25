@@ -16,7 +16,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'evidens/vim-twig'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'https://git.drupal.org/project/vimrc.git', { 'branch': '*.x-1.x', 'rtp': 'bundle/vim-plugin-for-drupal' }
+Plug 'https://git.drupal.org/project/vimrc.git', { 'branch': '8.x-1.x', 'rtp': 'bundle/vim-plugin-for-drupal' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
 Plug 'mattn/emmet-vim'
@@ -25,8 +25,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-vdebug/vdebug'
-Plug 'w0rp/ale'
 
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
@@ -93,12 +91,6 @@ let g:signify_vcs_list = ['git', 'svn']
 """""""
 " Other
 """""""
-
-" For Webpack (https://webpack.js.org/guides/development/)
-set backupcopy=yes
-
-" Allow per-project .vimrc files
-set exrc
 
 " Disable unsafe commands
 set secure
