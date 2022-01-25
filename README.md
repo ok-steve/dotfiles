@@ -13,24 +13,15 @@ This repo contains my dotfiles as well as instructions on setting up a local dev
 git clone --bare https://github.com/sccherry/dotfiles.git $HOME/.cfg
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'\nsource $HOME/.aliasrc" >> $HOME/.bashrc
 source $HOME/.bashrc
+config checkout
 ```
 
-### Notes
+## Commands
 
-- If not using Linux you may also need to install [VirtualBox](https://www.virtualbox.org/wiki/Downloads), which comes bundled with the Docker installation.
-
-## Configure version control
-
-1. Create SSH key to add to remote repositories: `ssh-keygen`.
-
-### Notes
-
-- To copy the SSH key to the clipboard: `cat ~/.ssh/id_rsa.pub`.
-- To commit files that were edited in Windows: `sudo apt-get install dos2unix -y`.
-
-## Configure text editor
-
-1. Change the system default editor: `sudo update-alternatives --config editor`.
+- Create SSH key to add to remote repositories: `ssh-keygen`
+- Copy the SSH key to the clipboard: `cat ~/.ssh/id_rsa.pub`
+- Commit files that were edited in Windows: `sudo apt-get install dos2unix -y`
+- Change the system default editor: `sudo update-alternatives --config editor`.
 
 ### Notes
 
