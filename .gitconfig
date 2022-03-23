@@ -6,7 +6,7 @@
   mergetool = vimdiff
 [user]
   name = Steve Cherry
-  email = stevenccherry@gmail.com
+  email = steve@stevecherry.net
 [alias]
   pf = push --force-with-lease
   stats = shortlog -sn
