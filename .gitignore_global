@@ -21,6 +21,10 @@ goutputstream-*
 # Sublime Text
 *.sublime-*
 
+# VS Code
+.vscode
+.devcontainer
+
 # Node
 npm-debug.log
 yarn-error.log
@@ -33,6 +37,10 @@ jspm_packages
 
 # Sass
 .sass-cache
+
+# Docker/Docker4Drupal
+docker-compose.yml
+mariadb-init
 
 # Other
 TODO
