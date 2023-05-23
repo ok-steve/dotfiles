@@ -8,6 +8,7 @@ This repo contains my dotfiles as well as instructions on setting up a local dev
 2. Download and install [Git](https://git-scm.com/downloads).
 3. Download and install [Vim](https://www.vim.org/download.php).
 4. Clone the repository and run `install.sh`.
+5. If necessary, `echo "source $HOME/.profile" >> $HOME/.bashrc && source $HOME/.bashrc`, for whichever shell needs it (ie. `.zshrc`).
 
 ## Commands
 
