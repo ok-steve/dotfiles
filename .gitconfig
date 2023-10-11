@@ -12,4 +12,6 @@
   stats = shortlog -sn
   praise = blame
 [init]
-	defaultBranch = main
+  defaultBranch = main
+[push]
+  autoSetupRemote = true
