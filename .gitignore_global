@@ -23,7 +23,6 @@ goutputstream-*
 
 # VS Code
 .vscode
-.devcontainer
 
 # Node
 npm-debug.log
