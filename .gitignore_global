@@ -21,9 +21,6 @@ goutputstream-*
 # Sublime Text
 *.sublime-*
 
-# VS Code
-.vscode
-
 # Node
 npm-debug.log
 yarn-error.log
